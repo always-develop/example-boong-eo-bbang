@@ -1,4 +1,4 @@
-package truck.menu;
+package truck.item;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
