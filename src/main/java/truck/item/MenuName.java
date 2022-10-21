@@ -4,9 +4,13 @@ import java.util.Optional;
 
 public class MenuName {
 
+    private static final int MAX_LENGTH = 12;
+    private static final int MIN_LENGTH = 1;
     private final String name;
 
     private MenuName(String name) {
+        checkArgument(name);
+
         this.name = name;
     }
 
@@ -39,5 +43,30 @@ public class MenuName {
     @Override
     public int hashCode() {
         return this.toString().hashCode();
+    }
+
+    private void checkArgument(String argument) {
+        checkEmpty(argument);
+        checkLength(argument);
+    }
+
+    private void checkEmpty(String argument) {
+        if (Optional.ofNullable(argument).isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+
+        if (argument.length() == 0) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    private void checkLength(String argument) {
+        if (MIN_LENGTH >= argument.length()) {
+            throw new IllegalArgumentException();
+        }
+
+        if (MAX_LENGTH <= argument.length()) {
+            throw new IllegalArgumentException();
+        }
     }
 }
