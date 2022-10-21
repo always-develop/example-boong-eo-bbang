@@ -30,5 +30,19 @@ class MenuNameTest {
         void Null로_초기화하면_IllegalArgumentException을_던진다() {
             assertThrows(IllegalArgumentException.class, () -> MenuName.of(""));
         }
+
+        @Test
+        void 열_두자_이내의_문자열로_초기화하면_IllegalArgumentException을_던진다() {
+            assertThrows(
+                    IllegalArgumentException.class,
+                    () -> MenuName.of("123456789012"));
+        }
+
+        @Test
+        void 열_두자_이상의_문자열로_초기화하면_IllegalArgumentException을_던진다() {
+            assertThrows(
+                    IllegalArgumentException.class,
+                    () -> MenuName.of("1234567890123"));
+        }
     }
 }
