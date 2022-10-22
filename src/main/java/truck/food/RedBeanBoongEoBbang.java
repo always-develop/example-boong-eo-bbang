@@ -1,11 +1,13 @@
 package truck.food;
 
-public class RedBeanBoongEoBbang implements BoongEoBbang {
+public class RedBeanBoongEoBbang extends BoongEoBbang {
 
     private static final BoongEoBbangType TYPE = BoongEoBbangType.RED_BEAN;
     private final Amount amount;
 
     private RedBeanBoongEoBbang(int amount) {
+        super();
+
         this.amount = Amount.of(amount);
     }
 

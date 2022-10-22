@@ -1,8 +1,10 @@
 package truck.food;
 
-public interface BoongEoBbang {
+public abstract class BoongEoBbang {
 
-    Name name();
-    BoongEoBbangType type();
-    Amount amount();
+    protected BoongEoBbang() { }
+
+    public abstract Name name();
+    public abstract BoongEoBbangType type();
+    public abstract Amount amount();
 }
