@@ -5,6 +5,8 @@ import java.util.Optional;
 public class CheckNull {
 
     public static void ofCollections(Object... objects) {
+        ofOne(objects);
+
         for (Object object : objects) {
             ofOne(object);
         }
