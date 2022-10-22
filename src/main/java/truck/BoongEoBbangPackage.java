@@ -26,6 +26,10 @@ public class BoongEoBbangPackage {
         return this.boongEoBbangs;
     }
 
+    public int count() {
+        return this.boongEoBbangs().size();
+    }
+
     private void checkItems(List<BoongEoBbang> items) {
         if (items.isEmpty()) {
             throw new IllegalArgumentException();
