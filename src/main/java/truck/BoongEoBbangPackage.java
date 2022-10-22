@@ -1,27 +1,30 @@
 package truck;
 
 import truck.food.BoongEoBbang;
-import util.CheckNull;
+import util.CheckInteger;
 
-import java.util.LinkedHashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class BoongEoBbangPackage {
 
-    private final Set<BoongEoBbang> boongEoBbangs;
+    private final List<BoongEoBbang> boongEoBbangs;
 
-    private BoongEoBbangPackage(BoongEoBbang... items) {
-        CheckNull.ofCollections((Object[]) items);
+    private BoongEoBbangPackage(List<BoongEoBbang> items) {
+        if (items.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
 
-        this.boongEoBbangs = new LinkedHashSet<>(List.of(items));
+        CheckInteger.moreThenOne(items.size());
+
+        this.boongEoBbangs = new ArrayList<>(items);
     }
 
-    public static BoongEoBbangPackage toGo(BoongEoBbang... items) {
+    public static BoongEoBbangPackage toGo(List<BoongEoBbang> items) {
         return new BoongEoBbangPackage(items);
     }
 
-    public Set<BoongEoBbang> boongEoBbangs() {
+    public List<BoongEoBbang> boongEoBbangs() {
         return this.boongEoBbangs;
     }
 }
