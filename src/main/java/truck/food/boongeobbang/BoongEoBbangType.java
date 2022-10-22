@@ -1,7 +1,15 @@
 package truck.food.boongeobbang;
 
+import truck.food.Name;
+
 public enum BoongEoBbangType {
 
-    CREAM_PUFF,
-    RED_BEAN
+    CREAM_PUFF("슈붕"),
+    RED_BEAN("팥붕");
+
+    private final String description;
+
+    BoongEoBbangType(String description) {
+        this.description = description;
+    }
 }
