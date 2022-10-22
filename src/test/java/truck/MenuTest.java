@@ -53,7 +53,7 @@ class MenuTest {
         void 메뉴를_게시할_때_null을_인자로_보낸다면_IllegalArgumentException을_던진다() {
             assertThrows(
                     IllegalArgumentException.class,
-                    () -> Menu.launch(null));
+                    () -> Menu.launch((Menu.Item) null));
         }
     }
 

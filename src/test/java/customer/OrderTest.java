@@ -48,7 +48,7 @@ class OrderTest {
 
         @Test
         void 주문_정보를_생성할_때_null을_인자로_보낸다면_IllegalArgumentException을_던진다() {
-            assertThrows(IllegalArgumentException.class, () -> Order.add(null));
+            assertThrows(IllegalArgumentException.class, () -> Order.add((Order.Item) null));
         }
     }
 }
