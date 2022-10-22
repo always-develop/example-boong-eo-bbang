@@ -10,4 +10,10 @@ public class CheckInteger {
             throw new IllegalArgumentException();
         }
     }
+
+    public static void moreThenZero(int integer) {
+        if (ZERO > integer) {
+            throw new IllegalArgumentException();
+        }
+    }
 }
