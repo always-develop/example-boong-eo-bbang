@@ -12,4 +12,8 @@ public enum BoongEoBbangType {
     BoongEoBbangType(String description) {
         this.description = description;
     }
+
+    public Name getName() {
+        return Name.of(this.description);
+    }
 }
