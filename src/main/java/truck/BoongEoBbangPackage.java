@@ -11,11 +11,7 @@ public class BoongEoBbangPackage {
     private final List<BoongEoBbang> boongEoBbangs;
 
     private BoongEoBbangPackage(List<BoongEoBbang> items) {
-        if (items.isEmpty()) {
-            throw new IllegalArgumentException();
-        }
-
-        CheckInteger.moreThenOne(items.size());
+        checkItems(items);
 
         this.boongEoBbangs = new ArrayList<>(items);
     }
@@ -26,5 +22,13 @@ public class BoongEoBbangPackage {
 
     public List<BoongEoBbang> boongEoBbangs() {
         return this.boongEoBbangs;
+    }
+
+    private void checkItems(List<BoongEoBbang> items) {
+        if (items.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+
+        CheckInteger.moreThenOne(items.size());
     }
 }
