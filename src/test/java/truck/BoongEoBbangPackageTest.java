@@ -12,7 +12,8 @@ import truck.food.RedBeanBoongEoBbang;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @DisplayName("BoongEoBbangPackageTest")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)

@@ -1,7 +1,5 @@
 package truck.food;
 
-import truck.food.Name;
-
 public enum BoongEoBbangType {
 
     CREAM_PUFF("슈붕"),

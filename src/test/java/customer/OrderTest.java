@@ -7,7 +7,8 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import truck.food.BoongEoBbangType;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @DisplayName("Order")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)

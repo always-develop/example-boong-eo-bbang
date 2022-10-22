@@ -9,7 +9,11 @@ import truck.food.BoongEoBbangType;
 import truck.food.CreamPuffBoongEoBbang;
 import truck.food.RedBeanBoongEoBbang;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @DisplayName("Menu")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)

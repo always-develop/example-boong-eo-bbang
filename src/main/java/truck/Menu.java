@@ -1,9 +1,9 @@
 package truck;
 
 import truck.food.Amount;
+import truck.food.BoongEoBbang;
 import truck.food.BoongEoBbangType;
 import truck.food.Name;
-import truck.food.BoongEoBbang;
 import util.CheckNull;
 
 import java.util.LinkedHashSet;
