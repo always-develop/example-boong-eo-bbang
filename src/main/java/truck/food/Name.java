@@ -1,5 +1,7 @@
 package truck.food;
 
+import util.CheckNull;
+
 import java.util.Optional;
 
 public class Name {
@@ -51,9 +53,7 @@ public class Name {
     }
 
     private void checkEmpty(String argument) {
-        if (Optional.ofNullable(argument).isEmpty()) {
-            throw new IllegalArgumentException();
-        }
+        CheckNull.ofOne(argument);
 
         if (argument.length() == 0) {
             throw new IllegalArgumentException();
