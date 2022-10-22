@@ -1,4 +1,4 @@
-package truck.item;
+package truck.food;
 
 public class Amount {
 

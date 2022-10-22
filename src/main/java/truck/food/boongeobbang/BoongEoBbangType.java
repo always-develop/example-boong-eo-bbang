@@ -1,4 +1,4 @@
-package truck.item;
+package truck.food.boongeobbang;
 
 public enum BoongEoBbangType {
 

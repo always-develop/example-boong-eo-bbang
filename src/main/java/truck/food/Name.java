@@ -1,21 +1,21 @@
-package truck.item;
+package truck.food;
 
 import java.util.Optional;
 
-public class MenuName {
+public class Name {
 
     private static final int MAX_LENGTH = 12;
     private static final int MIN_LENGTH = 1;
     private final String name;
 
-    private MenuName(String name) {
+    private Name(String name) {
         checkArgument(name);
 
         this.name = name;
     }
 
-    public static MenuName of(String name) {
-        return new MenuName(name);
+    public static Name of(String name) {
+        return new Name(name);
     }
 
     @Override
