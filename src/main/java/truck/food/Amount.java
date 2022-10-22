@@ -7,7 +7,7 @@ public class Amount {
     private final int amount;
 
     private Amount(int amount) {
-        CheckInteger.moreThenOne(amount);
+        CheckInteger.moreThenZero(amount);
 
         this.amount = amount;
     }
