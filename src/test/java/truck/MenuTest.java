@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import truck.food.BoongEoBbangType;
 import truck.food.CreamPuffBoongEoBbang;
 import truck.food.RedBeanBoongEoBbang;
 
@@ -82,6 +83,39 @@ class MenuTest {
                     Menu.Item.appendNew(RedBeanBoongEoBbang.launchMenu(1000)));
 
             assertEquals(menu.count(), 2);
+        }
+    }
+
+    @Nested
+    @DisplayName("Make")
+    class Maketest {
+
+        @Test
+        void 붕어빵_종류를_전달받아_메뉴에_존재하는_붕어빵의_주문을_접수할_수_있다() {
+            Menu menu = Menu.launch(
+                    Menu.Item.appendNew(CreamPuffBoongEoBbang.launchMenu(1000)),
+                    Menu.Item.appendNew(RedBeanBoongEoBbang.launchMenu(1000)));
+
+            assertDoesNotThrow(() -> menu.takeOrder(BoongEoBbangType.CREAM_PUFF));
+
+            assertEquals(
+                    menu.takeOrder(BoongEoBbangType.CREAM_PUFF).type(),
+                    BoongEoBbangType.CREAM_PUFF);
+
+            assertNotEquals(
+                    menu.takeOrder(BoongEoBbangType.CREAM_PUFF).type(),
+                    BoongEoBbangType.RED_BEAN);
+        }
+
+        @Test
+        void null을_인자로_전달받으면_IllegalArgumentException을_던진다() {
+            Menu menu = Menu.launch(
+                    Menu.Item.appendNew(CreamPuffBoongEoBbang.launchMenu(1000)),
+                    Menu.Item.appendNew(RedBeanBoongEoBbang.launchMenu(1000)));
+
+            assertThrows(
+                    IllegalArgumentException.class,
+                    () -> menu.takeOrder(null));
         }
     }
 }
