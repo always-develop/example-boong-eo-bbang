@@ -1,6 +1,7 @@
 package truck;
 
 import truck.food.Amount;
+import truck.food.BoongEoBbangType;
 import truck.food.Name;
 import truck.food.BoongEoBbang;
 import util.CheckNull;
@@ -34,6 +35,22 @@ public class Menu {
         return this.items.size();
     }
 
+    public BoongEoBbang takeOrder(BoongEoBbangType type) {
+        CheckNull.ofOne(type);
+
+        return findMenu(type)
+                .map(Item::boongEoBbang)
+                .orElseThrow(IllegalArgumentException::new);
+    }
+
+    private Optional<Item> findMenu(BoongEoBbangType type) {
+        CheckNull.ofOne(type);
+
+        return items().stream()
+                .filter(item -> item.name().equals(type.getName()))
+                .findAny();
+    }
+
     private void checkItemLength(Item... items) {
         if (items.length <= 0) {
             throw new IllegalArgumentException();
@@ -60,6 +77,10 @@ public class Menu {
 
         public Amount amount() {
             return this.menu.amount();
+        }
+
+        protected BoongEoBbang boongEoBbang() {
+            return this.menu;
         }
 
         @Override
