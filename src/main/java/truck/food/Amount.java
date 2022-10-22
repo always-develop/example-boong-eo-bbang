@@ -1,13 +1,13 @@
 package truck.food;
 
+import util.CheckInteger;
+
 public class Amount {
 
     private final int amount;
 
     private Amount(int amount) {
-        if (amount < 0) {
-            throw new IllegalArgumentException();
-        }
+        CheckInteger.moreThenOne(amount);
 
         this.amount = amount;
     }
@@ -15,4 +15,6 @@ public class Amount {
     public static Amount of(int amount) {
         return new Amount(amount);
     }
+
+
 }
