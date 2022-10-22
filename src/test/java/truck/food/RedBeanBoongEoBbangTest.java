@@ -1,4 +1,4 @@
-package truck.food.boongeobbang;
+package truck.food;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
@@ -8,17 +8,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("CreamPuffBoongEoBbang")
+@DisplayName("RedBeanBoongEoBbangTest")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class CreamPuffBoongEoBbangTest {
+class RedBeanBoongEoBbangTest {
 
     @Nested
     @DisplayName("Initialize")
     class InitializeTest {
 
         @Test
-        void 가격을_지정하여_슈크림_붕어빵_메뉴를_게시할_수_있다() {
-            assertDoesNotThrow(() -> CreamPuffBoongEoBbang.launchMenu(1000));
+        void 가격을_지정하여_팥_붕어빵_메뉴를_게시할_수_있다() {
+            assertDoesNotThrow(() -> RedBeanBoongEoBbang.launchMenu(1000));
         }
     }
 
@@ -26,7 +26,7 @@ class CreamPuffBoongEoBbangTest {
     @DisplayName("Name")
     class NameTest {
 
-        private final CreamPuffBoongEoBbang boongEoBbang = CreamPuffBoongEoBbang.launchMenu(1000);
+        private final RedBeanBoongEoBbang boongEoBbang = RedBeanBoongEoBbang.launchMenu(1000);
 
         @Test
         void 붕어빵_이름을_얻을_수_있다() {

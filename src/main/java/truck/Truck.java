@@ -1,8 +1,8 @@
 package truck;
 
 import customer.BuyBoongEoBbangs;
-import truck.food.boongeobbang.CreamPuffBoongEoBbang;
-import truck.food.boongeobbang.RedBeanBoongEoBbang;
+import truck.food.CreamPuffBoongEoBbang;
+import truck.food.RedBeanBoongEoBbang;
 
 public class Truck {
 

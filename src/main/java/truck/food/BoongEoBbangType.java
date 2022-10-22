@@ -1,4 +1,4 @@
-package truck.food.boongeobbang;
+package truck.food;
 
 import truck.food.Name;
 

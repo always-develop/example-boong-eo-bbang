@@ -1,7 +1,4 @@
-package truck.food.boongeobbang;
-
-import truck.food.Amount;
-import truck.food.Name;
+package truck.food;
 
 public interface BoongEoBbang {
 

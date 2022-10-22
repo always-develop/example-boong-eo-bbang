@@ -5,8 +5,8 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import truck.food.boongeobbang.CreamPuffBoongEoBbang;
-import truck.food.boongeobbang.RedBeanBoongEoBbang;
+import truck.food.CreamPuffBoongEoBbang;
+import truck.food.RedBeanBoongEoBbang;
 
 import static org.junit.jupiter.api.Assertions.*;
 
