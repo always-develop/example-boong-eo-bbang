@@ -1,8 +1,13 @@
 package truck;
 
-import customer.BuyBoongEoBbangs;
+import customer.Order;
+import truck.food.BoongEoBbang;
 import truck.food.CreamPuffBoongEoBbang;
 import truck.food.RedBeanBoongEoBbang;
+import util.CheckNull;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Truck {
 
@@ -19,7 +24,20 @@ public class Truck {
         return new Truck();
     }
 
-    public BoongEoBbangPackage sellBoongEoBbang(BuyBoongEoBbangs buyRequest) {
-        return new BoongEoBbangPackage();
+    public BoongEoBbangPackage buy(Order order) {
+        CheckNull.ofOne(order);
+
+        return BoongEoBbangPackage.toGo(makesForCount(order));
+    }
+
+    private List<BoongEoBbang> makesForCount(Order order) {
+        return order.items()
+                .stream()
+                .map(this::make)
+                .collect(Collectors.toList());
+    }
+
+    private BoongEoBbang make(Order.Item item) {
+        return menu.takeOrder(item.type());
     }
 }
