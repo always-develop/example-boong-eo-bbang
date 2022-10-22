@@ -15,6 +15,4 @@ public class Amount {
     public static Amount of(int amount) {
         return new Amount(amount);
     }
-
-
 }
