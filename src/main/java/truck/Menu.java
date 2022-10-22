@@ -15,7 +15,7 @@ public class Menu {
     private final Set<Item> items;
 
     private Menu(Item... items) {
-        CheckNull.ofCollections((Object) items);
+        CheckNull.ofCollections((Object[]) items);
 
         checkItemLength(items);
 

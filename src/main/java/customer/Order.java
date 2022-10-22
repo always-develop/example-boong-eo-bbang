@@ -14,7 +14,7 @@ public class Order {
     private final Set<Item> items;
 
     private Order(Item... items) {
-        CheckNull.ofCollections((Object) items);
+        CheckNull.ofCollections((Object[]) items);
 
         checkItemLength(items);
 
