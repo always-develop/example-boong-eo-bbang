@@ -1,6 +1,6 @@
 package truck.food;
 
-public class RedBeanBoongEoBbang extends BoongEoBbang {
+public class RedBeanBoongEoBbang implements BoongEoBbang {
 
     private static final BoongEoBbangType TYPE = BoongEoBbangType.RED_BEAN;
     private final Amount amount;
