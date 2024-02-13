@@ -16,12 +16,11 @@ public class BoongEoBbangPackage {
     }
 
     public static BoongEoBbangPackage toGo(List<BoongEoBbang> items) {
-        CheckNull.ofCollections(items);
-
         if (items.isEmpty()) {
             throw new IllegalArgumentException();
         }
 
+        CheckNull.ofCollections(items);
         CheckInteger.moreThenOne(items.size());
 
         return new BoongEoBbangPackage(items);
