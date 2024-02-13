@@ -14,15 +14,17 @@ public class Truck {
 
     private final Menu menu;
 
-    private Truck() {
-        // TODO use reflection, auto launched menu with Foods annotation
-        this.menu = Menu.launch(
-                Menu.Item.appendNew(CreamPuffBoongEoBbang.launchMenu(1000)),
-                Menu.Item.appendNew(RedBeanBoongEoBbang.launchMenu(1000)));
+    public Truck(Menu menu) {
+        this.menu = menu;
     }
 
     public static Truck open() {
-        return new Truck();
+        return new Truck(
+            Menu.launch(
+                Menu.Item.appendNew(CreamPuffBoongEoBbang.launchMenu(1000)),
+                Menu.Item.appendNew(RedBeanBoongEoBbang.launchMenu(1000))
+            )
+        );
     }
 
     public BoongEoBbangPackage buy(Order order) {
