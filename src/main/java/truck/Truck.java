@@ -1,5 +1,6 @@
 package truck;
 
+import customer.BoongEoBbangPackage;
 import customer.Order;
 import truck.food.BoongEoBbang;
 import truck.food.CreamPuffBoongEoBbang;

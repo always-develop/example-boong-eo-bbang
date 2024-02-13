@@ -1,4 +1,4 @@
-package truck;
+package customer;
 
 import truck.food.BoongEoBbang;
 import truck.food.Food;
