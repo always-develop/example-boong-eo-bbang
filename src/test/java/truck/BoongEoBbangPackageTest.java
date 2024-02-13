@@ -29,19 +29,19 @@ class BoongEoBbangPackageTest {
             boongEoBbangs.add(CreamPuffBoongEoBbang.launchMenu(1000));
             boongEoBbangs.add(RedBeanBoongEoBbang.launchMenu(1000));
 
-            assertDoesNotThrow(() -> BoongEoBbangPackage.toGo(boongEoBbangs));
+            assertDoesNotThrow(() -> BoongEoBbangPackage.doPackUp(boongEoBbangs));
         }
 
         @Test
         void null을_전달받으면_IllegalArgumentException을_던진다() {
-            assertThrows(IllegalArgumentException.class, () -> BoongEoBbangPackage.toGo(null));
+            assertThrows(IllegalArgumentException.class, () -> BoongEoBbangPackage.doPackUp(null));
         }
 
         @Test
         void 붕어빵_컬렉션_요소가_비어있으면_IllegalArgumentException을_던진다() {
             assertThrows(
                     IllegalArgumentException.class,
-                    () -> BoongEoBbangPackage.toGo(new ArrayList<>()));
+                    () -> BoongEoBbangPackage.doPackUp(new ArrayList<>()));
         }
     }
 }

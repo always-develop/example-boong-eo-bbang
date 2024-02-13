@@ -1,7 +1,6 @@
 package truck;
 
 import customer.Order;
-import customer.OrderItem;
 import truck.food.BoongEoBbang;
 import truck.food.CreamPuffBoongEoBbang;
 import truck.food.RedBeanBoongEoBbang;
@@ -27,20 +26,16 @@ public class Truck {
         );
     }
 
-    public BoongEoBbangPackage buy(Order order) {
+    public BoongEoBbangPackage buyBoongEoBbang(Order order) {
         CheckNull.ofOne(order);
 
-        return BoongEoBbangPackage.toGo(makesForCount(order));
+        return BoongEoBbangPackage.doPackUp(doMake(order));
     }
 
-    private List<BoongEoBbang> makesForCount(Order order) {
+    private List<BoongEoBbang> doMake(Order order) {
         return order.items()
                 .stream()
-                .map(this::make)
+                .map(orderItem -> menu.takeOrder(orderItem.type()))
                 .collect(Collectors.toList());
-    }
-
-    private BoongEoBbang make(OrderItem item) {
-        return menu.takeOrder(item.type());
     }
 }

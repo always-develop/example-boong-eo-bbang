@@ -38,8 +38,8 @@ class TruckTest {
                 OrderItem.appendNew(BoongEoBbangType.CREAM_PUFF, 1),
                 OrderItem.appendNew(BoongEoBbangType.RED_BEAN, 2));
 
-            assertDoesNotThrow(() -> truck.buy(order));
-            assertNotEquals(truck.buy(order).count(), 0);
+            assertDoesNotThrow(() -> truck.buyBoongEoBbang(order));
+            assertNotEquals(truck.buyBoongEoBbang(order).count(), 0);
         }
     }
 }
