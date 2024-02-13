@@ -1,21 +1,23 @@
 package truck;
 
 import truck.food.BoongEoBbang;
+import truck.food.Food;
 import util.CheckInteger;
 import util.CheckNull;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
-public class BoongEoBbangPackage {
+public class BoongEoBbangPackage implements Package {
 
-    private final List<BoongEoBbang> boongEoBbangs;
+    private final Queue<BoongEoBbang> boongEoBbangs;
 
     private BoongEoBbangPackage(List<BoongEoBbang> items) {
-        this.boongEoBbangs = new ArrayList<>(items);
+        this.boongEoBbangs = new LinkedList<>(items);
     }
 
-    public static BoongEoBbangPackage toGo(List<BoongEoBbang> items) {
+    public static BoongEoBbangPackage doPackUp(List<BoongEoBbang> items) {
         if (items.isEmpty()) {
             throw new IllegalArgumentException();
         }
@@ -26,11 +28,21 @@ public class BoongEoBbangPackage {
         return new BoongEoBbangPackage(items);
     }
 
-    public List<BoongEoBbang> boongEoBbangs() {
-        return this.boongEoBbangs;
+    public int count() {
+        return this.boongEoBbangs.size();
     }
 
-    public int count() {
-        return this.boongEoBbangs().size();
+    @Override
+    public boolean isEmpty() {
+        return this.boongEoBbangs.isEmpty();
+    }
+
+    @Override
+    public Food takeOne() {
+        if (isEmpty()) {
+            throw new IllegalArgumentException("already finished eating it.");
+        }
+
+        return this.boongEoBbangs.poll();
     }
 }

@@ -1,6 +1,6 @@
 package truck.food;
 
-public interface BoongEoBbang {
+public interface BoongEoBbang extends Food {
 
     Name name();
     BoongEoBbangType type();

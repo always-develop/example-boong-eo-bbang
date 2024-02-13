@@ -55,7 +55,7 @@ public class Name {
     private void checkEmpty(String argument) {
         CheckNull.ofOne(argument);
 
-        if (argument.length() == 0) {
+        if (argument.isEmpty()) {
             throw new IllegalArgumentException();
         }
     }
