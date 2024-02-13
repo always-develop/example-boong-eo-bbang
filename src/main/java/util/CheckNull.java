@@ -4,15 +4,15 @@ import java.util.Optional;
 
 public class CheckNull {
 
-    public static void ofCollections(Object... objects) {
+    public static <T> void ofCollections(T... objects) {
         ofOne(objects);
 
-        for (Object object : objects) {
+        for (T object : objects) {
             ofOne(object);
         }
     }
 
-    public static void ofOne(Object object) {
+    public static <T> void ofOne(T object) {
         if (Optional.ofNullable(object).isEmpty()) {
             throw new IllegalArgumentException();
         }
