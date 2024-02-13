@@ -1,6 +1,7 @@
 package truck;
 
 import customer.Order;
+import customer.OrderItem;
 import truck.food.BoongEoBbang;
 import truck.food.CreamPuffBoongEoBbang;
 import truck.food.RedBeanBoongEoBbang;
@@ -37,7 +38,7 @@ public class Truck {
                 .collect(Collectors.toList());
     }
 
-    private BoongEoBbang make(Order.Item item) {
+    private BoongEoBbang make(OrderItem item) {
         return menu.takeOrder(item.type());
     }
 }

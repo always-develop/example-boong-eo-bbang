@@ -12,13 +12,18 @@ public class BoongEoBbangPackage {
     private final List<BoongEoBbang> boongEoBbangs;
 
     private BoongEoBbangPackage(List<BoongEoBbang> items) {
-        CheckNull.ofCollections(items);
-        checkItems(items);
-
         this.boongEoBbangs = new ArrayList<>(items);
     }
 
     public static BoongEoBbangPackage toGo(List<BoongEoBbang> items) {
+        CheckNull.ofCollections(items);
+
+        if (items.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+
+        CheckInteger.moreThenOne(items.size());
+
         return new BoongEoBbangPackage(items);
     }
 
@@ -28,13 +33,5 @@ public class BoongEoBbangPackage {
 
     public int count() {
         return this.boongEoBbangs().size();
-    }
-
-    private void checkItems(List<BoongEoBbang> items) {
-        if (items.isEmpty()) {
-            throw new IllegalArgumentException();
-        }
-
-        CheckInteger.moreThenOne(items.size());
     }
 }

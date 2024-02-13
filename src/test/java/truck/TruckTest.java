@@ -1,6 +1,7 @@
 package truck;
 
 import customer.Order;
+import customer.OrderItem;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -34,8 +35,8 @@ class TruckTest {
             Truck truck = Truck.open();
 
             Order order = Order.add(
-                    Order.Item.appendNew(BoongEoBbangType.CREAM_PUFF, 1),
-                    Order.Item.appendNew(BoongEoBbangType.RED_BEAN, 2));
+                OrderItem.appendNew(BoongEoBbangType.CREAM_PUFF, 1),
+                OrderItem.appendNew(BoongEoBbangType.RED_BEAN, 2));
 
             assertDoesNotThrow(() -> truck.buy(order));
             assertNotEquals(truck.buy(order).count(), 0);
