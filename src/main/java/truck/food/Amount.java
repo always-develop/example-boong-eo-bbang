@@ -1,13 +1,13 @@
 package truck.food;
 
-import util.CheckInteger;
+import util.JavaCheckInteger;
 
 public class Amount {
 
     private final int amount;
 
     private Amount(int amount) {
-        CheckInteger.moreThenZero(amount);
+        JavaCheckInteger.moreThenZero(amount);
 
         this.amount = amount;
     }

@@ -1,7 +1,7 @@
 package customer;
 
 import truck.food.BoongEoBbangType;
-import util.CheckInteger;
+import util.JavaCheckInteger;
 import util.CheckNull;
 
 import java.util.Optional;
@@ -18,7 +18,7 @@ public class OrderItem {
 
     public static OrderItem appendNew(BoongEoBbangType type, int count) {
         CheckNull.ofOne(type);
-        CheckInteger.moreThenOne(count);
+        JavaCheckInteger.moreThenOne(count);
 
         return new OrderItem(type, count);
     }

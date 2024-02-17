@@ -1,6 +1,6 @@
 package util;
 
-public class CheckInteger {
+public class JavaCheckInteger {
 
     private static final int ZERO = 0;
     private static final int ONE = 1;
