@@ -2,17 +2,17 @@ package truck.food;
 
 import util.JavaCheckInteger;
 
-public class Amount {
+public class JavaAmount {
 
     private final int amount;
 
-    private Amount(int amount) {
+    private JavaAmount(int amount) {
         JavaCheckInteger.moreThenZero(amount);
 
         this.amount = amount;
     }
 
-    public static Amount of(int amount) {
-        return new Amount(amount);
+    public static JavaAmount of(int amount) {
+        return new JavaAmount(amount);
     }
 }

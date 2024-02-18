@@ -1,6 +1,6 @@
 package truck;
 
-import truck.food.Amount;
+import truck.food.JavaAmount;
 import truck.food.BoongEoBbang;
 import truck.food.BoongEoBbangType;
 import truck.food.Name;
@@ -75,7 +75,7 @@ public class Menu {
             return this.menu.name();
         }
 
-        public Amount amount() {
+        public JavaAmount amount() {
             return this.menu.amount();
         }
 

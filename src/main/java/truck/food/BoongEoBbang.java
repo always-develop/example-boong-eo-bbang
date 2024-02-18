@@ -4,5 +4,5 @@ public interface BoongEoBbang extends Food {
 
     Name name();
     BoongEoBbangType type();
-    Amount amount();
+    JavaAmount amount();
 }

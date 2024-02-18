@@ -3,12 +3,12 @@ package truck.food;
 public class RedBeanBoongEoBbang implements BoongEoBbang {
 
     private static final BoongEoBbangType TYPE = BoongEoBbangType.RED_BEAN;
-    private final Amount amount;
+    private final JavaAmount amount;
 
     private RedBeanBoongEoBbang(int amount) {
         super();
 
-        this.amount = Amount.of(amount);
+        this.amount = JavaAmount.of(amount);
     }
 
     public static RedBeanBoongEoBbang launchMenu(int amount) {
@@ -26,7 +26,7 @@ public class RedBeanBoongEoBbang implements BoongEoBbang {
     }
 
     @Override
-    public Amount amount() {
+    public JavaAmount amount() {
         return this.amount;
     }
 }

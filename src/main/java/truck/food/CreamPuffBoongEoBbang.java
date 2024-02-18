@@ -3,12 +3,12 @@ package truck.food;
 public class CreamPuffBoongEoBbang implements BoongEoBbang {
 
     private static final BoongEoBbangType TYPE = BoongEoBbangType.CREAM_PUFF;
-    private final Amount amount;
+    private final JavaAmount amount;
 
     private CreamPuffBoongEoBbang(int amount) {
         super();
 
-        this.amount = Amount.of(amount);
+        this.amount = JavaAmount.of(amount);
     }
 
     public static CreamPuffBoongEoBbang launchMenu(int amount) {
@@ -26,7 +26,7 @@ public class CreamPuffBoongEoBbang implements BoongEoBbang {
     }
 
     @Override
-    public Amount amount() {
+    public JavaAmount amount() {
         return this.amount;
     }
 }
