@@ -5,7 +5,7 @@ import customer.Order;
 import truck.food.BoongEoBbang;
 import truck.food.CreamPuffBoongEoBbang;
 import truck.food.RedBeanBoongEoBbang;
-import util.CheckNull;
+import util.JavaCheckNull;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,7 +28,7 @@ public class Truck {
     }
 
     public BoongEoBbangPackage buyBoongEoBbang(Order order) {
-        CheckNull.ofOne(order);
+        JavaCheckNull.ofOne(order);
 
         return BoongEoBbangPackage.doPackUp(doMake(order));
     }

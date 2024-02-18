@@ -1,6 +1,6 @@
 package customer;
 
-import util.CheckNull;
+import util.JavaCheckNull;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -14,7 +14,7 @@ public class Order {
     }
 
     public static Order add(OrderItem... items) {
-        CheckNull.ofCollections(items);
+        JavaCheckNull.ofCollections(items);
 
         return new Order(items);
     }

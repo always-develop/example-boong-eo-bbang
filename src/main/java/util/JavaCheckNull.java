@@ -2,7 +2,7 @@ package util;
 
 import java.util.Optional;
 
-public class CheckNull {
+public class JavaCheckNull {
 
     @SafeVarargs
     public static <T> void ofCollections(T... objects) {

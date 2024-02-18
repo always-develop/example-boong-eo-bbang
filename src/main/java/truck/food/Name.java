@@ -1,6 +1,6 @@
 package truck.food;
 
-import util.CheckNull;
+import util.JavaCheckNull;
 
 import java.util.Optional;
 
@@ -53,7 +53,7 @@ public class Name {
     }
 
     private void checkEmpty(String argument) {
-        CheckNull.ofOne(argument);
+        JavaCheckNull.ofOne(argument);
 
         if (argument.isEmpty()) {
             throw new IllegalArgumentException();

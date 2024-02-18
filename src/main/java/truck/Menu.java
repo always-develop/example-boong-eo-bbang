@@ -4,7 +4,7 @@ import truck.food.Amount;
 import truck.food.BoongEoBbang;
 import truck.food.BoongEoBbangType;
 import truck.food.Name;
-import util.CheckNull;
+import util.JavaCheckNull;
 
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -16,7 +16,7 @@ public class Menu {
     private final Set<Item> items;
 
     private Menu(Item... items) {
-        CheckNull.ofCollections(items);
+        JavaCheckNull.ofCollections(items);
 
         checkItemLength(items);
 
@@ -36,7 +36,7 @@ public class Menu {
     }
 
     public BoongEoBbang takeOrder(BoongEoBbangType type) {
-        CheckNull.ofOne(type);
+        JavaCheckNull.ofOne(type);
 
         return findMenu(type)
                 .map(Item::boongEoBbang)
@@ -44,7 +44,7 @@ public class Menu {
     }
 
     private Optional<Item> findMenu(BoongEoBbangType type) {
-        CheckNull.ofOne(type);
+        JavaCheckNull.ofOne(type);
 
         return items().stream()
                 .filter(item -> item.name().equals(type.getName()))
@@ -62,7 +62,7 @@ public class Menu {
         private final BoongEoBbang menu;
 
         private Item(BoongEoBbang menu) {
-            CheckNull.ofOne(menu);
+            JavaCheckNull.ofOne(menu);
 
             this.menu = menu;
         }

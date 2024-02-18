@@ -3,7 +3,7 @@ package customer;
 import truck.food.BoongEoBbang;
 import truck.food.Food;
 import util.JavaCheckInteger;
-import util.CheckNull;
+import util.JavaCheckNull;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class BoongEoBbangPackage implements Package {
             throw new IllegalArgumentException();
         }
 
-        CheckNull.ofCollections(items);
+        JavaCheckNull.ofCollections(items);
         JavaCheckInteger.moreThenOne(items.size());
 
         return new BoongEoBbangPackage(items);
