@@ -1,6 +1,6 @@
 package truck.food
 
-class Amount(
+data class Amount(
     private var amount: Int
 ) {
     private companion object {
