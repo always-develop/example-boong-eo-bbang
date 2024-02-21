@@ -4,20 +4,20 @@ import util.JavaCheckNull;
 
 import java.util.Optional;
 
-public class Name {
+public class JavaName {
 
     private static final int MAX_LENGTH = 12;
     private static final int MIN_LENGTH = 1;
     private final String name;
 
-    private Name(String name) {
+    private JavaName(String name) {
         checkArgument(name);
 
         this.name = name;
     }
 
-    public static Name of(String name) {
-        return new Name(name);
+    public static JavaName of(String name) {
+        return new JavaName(name);
     }
 
     @Override

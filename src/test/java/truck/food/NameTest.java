@@ -19,31 +19,31 @@ class NameTest {
 
         @Test
         void 문자열로_초기화할_수_있다() {
-            assertDoesNotThrow(() -> Name.of("메뉴"));
+            assertDoesNotThrow(() -> JavaName.of("메뉴"));
         }
 
         @Test
         void 빈_문자열로_초기화하면_IllegalArgumentException을_던진다() {
-            assertThrows(IllegalArgumentException.class, () -> Name.of(""));
+            assertThrows(IllegalArgumentException.class, () -> JavaName.of(""));
         }
 
         @Test
         void Null로_초기화하면_IllegalArgumentException을_던진다() {
-            assertThrows(IllegalArgumentException.class, () -> Name.of(""));
+            assertThrows(IllegalArgumentException.class, () -> JavaName.of(""));
         }
 
         @Test
         void 열_두자_이내의_문자열로_초기화하면_IllegalArgumentException을_던진다() {
             assertThrows(
                     IllegalArgumentException.class,
-                    () -> Name.of("123456789012"));
+                    () -> JavaName.of("123456789012"));
         }
 
         @Test
         void 열_두자_이상의_문자열로_초기화하면_IllegalArgumentException을_던진다() {
             assertThrows(
                     IllegalArgumentException.class,
-                    () -> Name.of("1234567890123"));
+                    () -> JavaName.of("1234567890123"));
         }
     }
 }

@@ -3,7 +3,7 @@ package truck;
 import truck.food.JavaAmount;
 import truck.food.BoongEoBbang;
 import truck.food.BoongEoBbangType;
-import truck.food.Name;
+import truck.food.JavaName;
 import util.JavaCheckNull;
 
 import java.util.LinkedHashSet;
@@ -71,7 +71,7 @@ public class Menu {
             return new Item(menu);
         }
 
-        public Name name() {
+        public JavaName name() {
             return this.menu.name();
         }
 

@@ -2,7 +2,7 @@ package truck.food;
 
 public interface BoongEoBbang extends Food {
 
-    Name name();
+    JavaName name();
     BoongEoBbangType type();
     JavaAmount amount();
 }

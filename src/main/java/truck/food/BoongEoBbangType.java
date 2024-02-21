@@ -11,7 +11,7 @@ public enum BoongEoBbangType {
         this.description = description;
     }
 
-    public Name getName() {
-        return Name.of(this.description);
+    public JavaName getName() {
+        return JavaName.of(this.description);
     }
 }

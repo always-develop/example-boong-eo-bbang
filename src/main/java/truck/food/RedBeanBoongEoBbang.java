@@ -16,7 +16,7 @@ public class RedBeanBoongEoBbang implements BoongEoBbang {
     }
 
     @Override
-    public Name name() {
+    public JavaName name() {
         return TYPE.getName();
     }
 
