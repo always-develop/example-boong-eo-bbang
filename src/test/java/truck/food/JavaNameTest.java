@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @DisplayName("Name")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class NameTest {
+class JavaNameTest {
 
     @Nested
     @DisplayName("Initialize")
