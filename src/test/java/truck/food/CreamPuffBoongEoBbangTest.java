@@ -20,7 +20,7 @@ class CreamPuffBoongEoBbangTest {
 
         @Test
         void 가격을_지정하여_슈크림_붕어빵_메뉴를_게시할_수_있다() {
-            assertDoesNotThrow(() -> CreamPuffBoongEoBbang.launchMenu(1000));
+            assertDoesNotThrow(() -> JavaCreamPuffBoongEoBbang.launchMenu(1000));
         }
     }
 
@@ -28,7 +28,7 @@ class CreamPuffBoongEoBbangTest {
     @DisplayName("Name")
     class NameTest {
 
-        private final CreamPuffBoongEoBbang boongEoBbang = CreamPuffBoongEoBbang.launchMenu(1000);
+        private final JavaCreamPuffBoongEoBbang boongEoBbang = JavaCreamPuffBoongEoBbang.launchMenu(1000);
 
         @Test
         void 붕어빵_이름을_얻을_수_있다() {

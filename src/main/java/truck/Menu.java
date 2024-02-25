@@ -1,8 +1,8 @@
 package truck;
 
 import truck.food.JavaAmount;
-import truck.food.BoongEoBbang;
-import truck.food.BoongEoBbangType;
+import truck.food.JavaBoongEoBbang;
+import truck.food.JavaBoongEoBbangType;
 import truck.food.JavaName;
 import util.JavaCheckNull;
 
@@ -35,7 +35,7 @@ public class Menu {
         return this.items.size();
     }
 
-    public BoongEoBbang takeOrder(BoongEoBbangType type) {
+    public JavaBoongEoBbang takeOrder(JavaBoongEoBbangType type) {
         JavaCheckNull.ofOne(type);
 
         return findMenu(type)
@@ -43,7 +43,7 @@ public class Menu {
                 .orElseThrow(IllegalArgumentException::new);
     }
 
-    private Optional<Item> findMenu(BoongEoBbangType type) {
+    private Optional<Item> findMenu(JavaBoongEoBbangType type) {
         JavaCheckNull.ofOne(type);
 
         return items().stream()
@@ -59,15 +59,15 @@ public class Menu {
 
     public static class Item {
 
-        private final BoongEoBbang menu;
+        private final JavaBoongEoBbang menu;
 
-        private Item(BoongEoBbang menu) {
+        private Item(JavaBoongEoBbang menu) {
             JavaCheckNull.ofOne(menu);
 
             this.menu = menu;
         }
 
-        public static Item appendNew(BoongEoBbang menu) {
+        public static Item appendNew(JavaBoongEoBbang menu) {
             return new Item(menu);
         }
 
@@ -79,7 +79,7 @@ public class Menu {
             return this.menu.amount();
         }
 
-        protected BoongEoBbang boongEoBbang() {
+        protected JavaBoongEoBbang boongEoBbang() {
             return this.menu;
         }
 

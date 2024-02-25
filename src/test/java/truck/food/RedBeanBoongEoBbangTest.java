@@ -20,7 +20,7 @@ class RedBeanBoongEoBbangTest {
 
         @Test
         void 가격을_지정하여_팥_붕어빵_메뉴를_게시할_수_있다() {
-            assertDoesNotThrow(() -> RedBeanBoongEoBbang.launchMenu(1000));
+            assertDoesNotThrow(() -> JavaRedBeanBoongEoBbang.launchMenu(1000));
         }
     }
 
@@ -28,7 +28,7 @@ class RedBeanBoongEoBbangTest {
     @DisplayName("Name")
     class NameTest {
 
-        private final RedBeanBoongEoBbang boongEoBbang = RedBeanBoongEoBbang.launchMenu(1000);
+        private final JavaRedBeanBoongEoBbang boongEoBbang = JavaRedBeanBoongEoBbang.launchMenu(1000);
 
         @Test
         void 붕어빵_이름을_얻을_수_있다() {

@@ -1,6 +1,6 @@
 package customer;
 
-import truck.food.BoongEoBbang;
+import truck.food.JavaBoongEoBbang;
 import truck.food.JavaFood;
 import util.JavaCheckInteger;
 import util.JavaCheckNull;
@@ -11,13 +11,13 @@ import java.util.Queue;
 
 public class BoongEoBbangPackage implements Package {
 
-    private final Queue<BoongEoBbang> boongEoBbangs;
+    private final Queue<JavaBoongEoBbang> boongEoBbangs;
 
-    private BoongEoBbangPackage(List<BoongEoBbang> items) {
+    private BoongEoBbangPackage(List<JavaBoongEoBbang> items) {
         this.boongEoBbangs = new LinkedList<>(items);
     }
 
-    public static BoongEoBbangPackage doPackUp(List<BoongEoBbang> items) {
+    public static BoongEoBbangPackage doPackUp(List<JavaBoongEoBbang> items) {
         if (items.isEmpty()) {
             throw new IllegalArgumentException();
         }

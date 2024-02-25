@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import truck.food.BoongEoBbangType;
+import truck.food.JavaBoongEoBbangType;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -21,7 +21,7 @@ class OrderTest {
         @Test
         void 주문_정보를_가변인자로_전달하여_주문_객체를_만들_수_있다() {
             assertDoesNotThrow(() ->
-                    Order.add(OrderItem.appendNew(BoongEoBbangType.CREAM_PUFF, 1)));
+                    Order.add(OrderItem.appendNew(JavaBoongEoBbangType.CREAM_PUFF, 1)));
         }
 
         @Test
@@ -35,11 +35,11 @@ class OrderTest {
         void 주문_정보를_생성할_때_붕어빵_개수가_0보다_작다면_IllegalArgumentException을_던진다() {
             assertThrows(
                     IllegalArgumentException.class,
-                    () -> Order.add(OrderItem.appendNew(BoongEoBbangType.RED_BEAN, 0)));
+                    () -> Order.add(OrderItem.appendNew(JavaBoongEoBbangType.RED_BEAN, 0)));
 
             assertThrows(
                     IllegalArgumentException.class,
-                    () -> Order.add(OrderItem.appendNew(BoongEoBbangType.RED_BEAN, -1)));
+                    () -> Order.add(OrderItem.appendNew(JavaBoongEoBbangType.RED_BEAN, -1)));
         }
 
         @Test
