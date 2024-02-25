@@ -1,9 +1,9 @@
 package customer;
 
-import truck.food.Food;
+import truck.food.JavaFood;
 
 public interface Package {
 
-    Food takeOne();
+    JavaFood takeOne();
     boolean isEmpty();
 }

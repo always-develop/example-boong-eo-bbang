@@ -1,7 +1,7 @@
 package customer;
 
 import truck.food.BoongEoBbang;
-import truck.food.Food;
+import truck.food.JavaFood;
 import util.JavaCheckInteger;
 import util.JavaCheckNull;
 
@@ -38,7 +38,7 @@ public class BoongEoBbangPackage implements Package {
     }
 
     @Override
-    public Food takeOne() {
+    public JavaFood takeOne() {
         if (isEmpty()) {
             throw new IllegalArgumentException("already finished eating it.");
         }

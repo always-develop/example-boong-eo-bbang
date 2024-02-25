@@ -1,6 +1,6 @@
 package truck.food;
 
-public interface BoongEoBbang extends Food {
+public interface BoongEoBbang extends JavaFood {
 
     JavaName name();
     BoongEoBbangType type();
